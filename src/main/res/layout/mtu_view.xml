@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="MTU"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/minusButton"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/rangeSeekBar"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toTopOf="@+id/rangeSeekBar" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/rangeSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="512"
+        android:min="20"
+        app:layout_constraintBottom_toBottomOf="@+id/mtuTextView"
+        app:layout_constraintEnd_toStartOf="@+id/mtuTextView"
+        app:layout_constraintStart_toEndOf="@+id/minusButton"
+        app:layout_constraintTop_toTopOf="@+id/mtuTextView" />
+
+
+    <TextView
+        android:id="@+id/mtuTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        app:layout_constraintBottom_toBottomOf="@+id/plusButton"
+        app:layout_constraintEnd_toStartOf="@+id/plusButton"
+        app:layout_constraintTop_toTopOf="@+id/plusButton" />
+
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minusButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FeasyBlue</string>
+
+    <string name="ok">OK</string>
+    <string name="close">Closed</string>
+
+    <string name="user_agreement">User Agreement</string>
+    <string name="privacy_agreement">Privacy agreement</string>
+    <string name="permission_location_prompt">Location permission is necessary for scanning Bluetooth devices</string>
+    <string name="permission_write_prompt">Downloading the firmware and importing it into the external storage directory requires access to the external storage.</string>
+    <string name="to_setting_open_permission">You need to go to the application settings to manually enable permissions</string>
+
+    <string name="bluetooth_off">Bluetooth is disabled.</string>
+    <string name="gps_off">Location is disabled.</string>
+    <string name="gps_more">More</string>
+    <string name="gps_more_title">positioning service</string>
+    <string name="gps_more_text_bluetooth">Your phone may need to enable location services to scan for Bluetooth LE devices. If you are sure that there are broadcasting devices in range and you cannot see them here, please enable it. If the device can be scanned, please ignore it.</string>
+    <string name="gps_more_text_wifi">Your phone may need to enable location services to automatically recognize the SSID of the connected WiFi. If you are connected to WiFi but cannot recognize the SSID, please enable it. If you can recognize the SSID of the connected WiFi, please ignore it.</string>
+    <string name="enable">Open</string>
+
+
+
+    <!--footer-->
+    <string name="communication">Communication</string>
+    <string name="setting">Setting</string>
+    <string name="about">About</string>
+    <string name="store">Store</string>
+
+    <!--search device activity-->
+    <string name="search">Search</string>
+    <string name="searching">Searching&#8230;</string>
+    <string name="searched">Search finished</string>
+    <string name="rssi">RSSI</string>
+    <string name="mac">MAC: </string>
+    <string name="paired">[Paired]</string>
+    <string name="sort">Sort</string>
+    <string name="filter">Filter</string>
+    <string name="filter_by_rssi">RSSI filtering</string>
+    <string name="filter_by_name">Name filtering</string>
+    <string name="minimum_rssi">Filter threshold</string>
+
+
+    <!--throughput activity-->
+    <string name="clear">Clear</string>
+    <string name="receive">Receive %1$d bytes %2$d packet</string>
+    <string name="send">Sent together %1$d bytes %2$d packet</string>
+    <!--<string name="byt">字节</string>
+    <string name="packge">包 </string>-->
+    <string name="sendFile">Send File</string>
+    <string name="stopSend">Stop</string>
+    <string name="sendPackage">Send</string>
+    <string name="intervalSend">Cyclic</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnect</string>
+    <string name="connecting">Connecting</string>
+    <string name="default_interval_send_timer">100</string>
+    <string name="openSendFileError">File selection failed</string>
+    <string name="stop">Stop</string>
+    <string name="transmissionConfiguration">Configuration</string>
+    <string name="serviceInfo">Service Information</string>
+    <string name="characteristicInfo">Feature information</string>
+    <string name="deviceInfo">Device Information</string>
+    <string name="modelNumber">Model</string>
+    <string name="manufacturerName">Manufacturer</string>
+    <string name="serialNumber">Serial number (device address)</string>
+    <string name="hardwareRevision">hardware version</string>
+    <string name="softwareRevision">Software version</string>
+    <string name="save">Save</string>
+    <string name="advData">Broadcast deviceData</string>
+    <string name="byteString">%d bytes</string>
+    <string name="intervalHint">Sending interval</string>
+    <string name="selectFile">Select File</string>
+    <string name="selectedFile">Selected file：%s</string>
+    <string name="testFile">Test file</string>
+
+    <!-- SelectFileActivity -->
+    <string name="custom_size">Custom size</string>
+    <string name="shortcut_options">Shortcut options</string>
+    <string name="send_file">send files</string>
+
+    <!-- Heand -->
+    <string name="back">Back</string>
+
+
+    <!--关于-->
+    <string name="company">Company</string>
+    <string name="company_name">Shenzhen Feasycom Technology Co.,Ltd</string>
+    <string name="tel_number">+86-0755-27924639</string>
+    <string name="tel">Telephone</string>
+    <string name="web">Web</string>
+    <string name="web_url">www.feasycom.com</string>
+    <string name="mail">Mail</string>
+    <string name="mail_addr">support@feasycom.com</string>
+    <string name="wx">Wechat</string>
+
+    <string name="qr_success">Saved successfully, please go to the album to view.</string>
+    <string name="qr_failed">Failed to save.</string>
+
+
+    <string name="userAndPrivacyAgreement">User Agreement and Privacy Policy</string>
+    <string name="userAndPrivacyAgreementDetail">Use the APP to agree to "$1$s" and "$2$s", please go to "About" to view the agreement details.</string>-->
+    <string name="userAndPrivacyAgreementPrefix">Agree to use the app</string>
+    <string name="userAndPrivacyAgreementSuffix">, Please go to "About" to view the agreement details.</string>
+    <string name="userAgreement">User Agreement</string>
+    <string name="privacyAgreement">Privacy agreement</string>
+    <string name="detail">Detail</string>
+    <string name="agree">Agree</string>
+    <string name="refuse">Refuse</string>
+
+    <!--SettingFragment-->
+    <string name="parameterDefining">Parameter modification</string>
+    <string name="settingTitle">Setting</string>
+    <string name="connectTest">Production test</string>
+    <string name="OTAUpgrade">OTA upgrade</string>
+    <string name="open_sdp">Enable SDP service</string>
+    <string name="close_sdp">Close SDP service</string>
+
+
+    <string name="OTABatchUpgrade">Bulk OTA upgrade</string>
+
+    <string name="wifi_setting_text">WiFi parameter settings</string>
+    <string name="quickConnection">Quick connect</string>
+
+    <string name="refresh">Refresh</string>
+    <string name="feedback">Feedback</string>
+
+
+    <!--parameterModify-->
+    <string name="begin">Begin</string>
+    <string name="deviceName">Device Name</string>
+    <string name="pin">Pin</string>
+    <string name="baud">Baud rate</string>
+    <string name="customizeSelect">Custom selected</string>
+    <string name="customizeCommand">Custom instruction ∧</string>
+    <string name="customizeCommandHid">Custom instruction ∨</string>
+    <string name="none">not</string>
+    <string name="compeletCount">Number of completions</string>
+    <string name="name">Device Name</string>
+    <string name="addr">Address</string>
+    <string name="openEngineSuccess">Successfully entered the air command mode</string>
+    <string name="openEngineTimeOut">Timeout when entering air command mode</string>
+    <string name="openEngineFailed">Failed to enter air command mode</string>
+    <string name="read">Read</string>
+    <string name="version">Version</string>
+    <string name="success">Success</string>
+    <string name="failed">Failed</string>
+    <string name="timeout">Time out</string>
+    <string name="same">Same</string>
+    <string name="modify">Modify</string>
+    <string name="modifyComplete">Modification is complete</string>
+    <string name="password">Password</string>
+    <string name="modifyCompleteCount">Modification completed</string>
+    <string name="commandNull">AT command is empty</string>
+
+    <!--ota-->
+    <string name="pleaseSelectTheFirmware">Please select firmware</string>
+    <string name="downloadFile">Get the firmware</string>
+    <string name="dfuName">DFU Name</string>
+    <string name="openFile">Select firmware</string>
+    <string name="selectedFirmware">Firmware selected</string>
+    <string name="notToChoose">nothing</string>
+    <string name="type">Model</string>
+    <string name="versionApp">APP Version</string>
+    <string name="bootLoader">BL Version</string>
+    <string name="module">Model</string>
+    <string name="firmware">Firmware</string>
+    <string name="toUpgrade">Start upgrade</string>
+    <string name="restoreTheFactorySettings">Upgrade and restore factory settings</string>
+    <string name="checkModuleVersion">Check module version</string>
+    <string name="dfuIllegal">Illegal DFU file</string>
+    <string name="waitingForUpdate">Waiting for upgrade</string>
+    <string name="updating">During upgrade</string>
+    <string name="please_start_the_upgrade">Please start the upgrade</string>
+    <string name="updateSuccess">Update success</string>
+    <string name="updateFailed">Upgrade unsuccessful</string>
+    <string name="nameNotMatch">Device model does not match</string>
+    <string name="versionIsLow">Firmware version is low</string>
+    <string name="blIsHigh">Device boot version is high</string>
+    <string name="pairing_record">Clear pairing history</string>
+    <string name="network_error">Network error, please check the network!</string>
+    <string name="down_file_error">Network or file name error</string>
+    <string name="down_file_finish">download successful</string>
+    <string name="io_error">File read error</string>
+    <string name="error">Error</string>
+    <string name="dfu_error">Invalid firmware</string>
+
+
+    <string name="permission_rationale_settings">You can grant this permission by navigating to the application settings.</string>
+    <string name="title_permission_required">Need permission</string>
+    <string name="external_storage_permission_required">Downloading the firmware and importing it into the external storage directory requires access to the external storage.</string>
+    <string name="upgrade_percentage">%1$d</string>
+
+
+    <string name="feedback_title">Feedback</string>
+    <string name="feedback_proposal">Suggest</string>
+    <string name="feedback_abnormal_function">Function</string>
+    <string name="feedback_interface_abnormality">UI</string>
+    <string name="feedback_cooperation">Cooperation</string>
+    <string name="feedback_submit">Submit</string>
+    <string name="feedback_data_error">Please enter a feedback question.</string>
+    <string name="feedback_status">Sending feedback&#8230;</string>
+    <string name="feedback_success">Feedback success</string>
+    <string name="feedback_failure">Feedback failed</string>
+    <string name="no_network">Not connected to the internet</string>
+    <string name="CRC">CRC32: %s</string>
+    <string name="export">Export</string>
+    <string name="percentage">100 %%</string>
+    <string name="sendByte">Has been sent：%1$d</string>
+    <string name="rate">Average rate：%1$d Bytes/s</string>
+    <string name="timer">time：</string>
+    <string name="hide">Click to hide</string>
+    <string name="photo_album">Photo Album</string>
+
+
+    <string name="number_upgrades">Number of upgrades： %1$d</string>
+    <string name="stop_batch_upgrade">Stop batch upgrade</string>
+    <string name="start_batch_upgrade">Start batch upgrade</string>
+    <string name="batch_warning">The specified number of devices have been upgraded, please click the settings in the upper right corner to modify the number of upgraded devices</string>
+    <string name="show_progress">Show progress bar</string>
+
+
+    <string name="send_progress">%1$d %%</string>
+
+    <string name="digitsHex">0123456789abcdefABCDEF </string>
+
+</resources>

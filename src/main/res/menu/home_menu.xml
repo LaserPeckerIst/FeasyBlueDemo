@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MissingDefaultResource">
+
+    <item
+        android:id="@+id/communication"
+        android:icon="@drawable/communication"
+        android:title="@string/communication" />
+
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/setting"
+        android:title="@string/setting"/>
+
+    <item
+        android:id="@+id/store"
+        android:icon="@drawable/store"
+        android:title="@string/store"/>
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/about"
+        android:title="@string/about" />
+
+</menu>

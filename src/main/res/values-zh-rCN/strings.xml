@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FeasyBlue</string>
+
+    <string name="ok">确定</string>
+    <string name="close">关闭</string>
+
+    <string name="user_agreement">用户协议</string>
+    <string name="privacy_agreement">隐私协议</string>
+    <string name="permission_location_prompt">定位权限是扫描蓝牙设备所必须的权限</string>
+    <string name="permission_write_prompt">下载固件并导入到外部存储目录中需要访问外部存储的权限。</string>
+    <string name="to_setting_open_permission">您需要去应用程序设置当中手动开启权限</string>
+
+    <string name="bluetooth_off">蓝牙已禁用。</string>
+    <string name="gps_off">位置已禁用。</string>
+    <string name="gps_more">更多</string>
+    <string name="gps_more_title">定位服务</string>
+    <string name="gps_more_text_bluetooth">您的手机可能需要启用定位服务才能扫描Bluetooth LE设备。如果您确定范围内有正在广播
+                的设备并且您在此处看不到它们，请启用它。如果可以扫描出设备,请忽略它。</string>
+    <string name="gps_more_text_wifi">您的手机可能需要启用定位服务才能自动识别已连接 WiFi 的SSID。如果您连接了 WiFi 却无法识别SSID,那么请启用它,如果可以识别已连接 WiFi 的SSID,请忽略它。</string>
+    <string name="enable">打开</string>
+
+
+
+    <!--footer-->
+    <string name="communication">通讯</string>
+    <string name="setting">设置</string>
+    <string name="about">关于</string>
+    <string name="store">商城</string>
+
+    <!--search device activity-->
+    <string name="search">搜索</string>
+    <string name="searching">搜索中&#8230;</string>
+    <string name="searched">搜索完毕</string>
+    <string name="rssi">信号</string>
+    <string name="mac">地址: </string>
+    <string name="paired">[已配对]</string>
+    <string name="sort">排序</string>
+    <string name="filter">过滤</string>
+    <string name="filter_by_rssi">RSSI过滤</string>
+    <string name="filter_by_name">名称过滤</string>
+    <string name="minimum_rssi">过滤阈值</string>
+
+
+    <!--throughput activity-->
+    <string name="clear">清除</string>
+    <string name="receive">接收 %1$d 字节 %2$d 包</string>
+    <string name="send">发送 %1$d 字节 %2$d 包</string>
+    <!--<string name="byt">字节</string>
+    <string name="packge">包 </string>-->
+    <string name="sendFile">发文件</string>
+    <string name="stopSend">停止发送</string>
+    <string name="sendPackage">发送</string>
+    <string name="intervalSend">循环发送</string>
+    <string name="connected">已连接</string>
+    <string name="disconnected">连接断开</string>
+    <string name="connecting">连接中</string>
+    <string name="default_interval_send_timer">100</string>
+    <string name="openSendFileError">文件选择失败</string>
+    <string name="stop">停止</string>
+    <string name="transmissionConfiguration">传输配置</string>
+    <string name="serviceInfo">服务信息</string>
+    <string name="characteristicInfo">特征信息</string>
+    <string name="deviceInfo">设备信息</string>
+    <string name="modelNumber">型号</string>
+    <string name="manufacturerName">制造商</string>
+    <string name="serialNumber">序列号(设备地址)</string>
+    <string name="hardwareRevision">硬件版本</string>
+    <string name="softwareRevision">软件版本</string>
+    <string name="save">保存</string>
+    <string name="advData">广播数据</string>
+    <string name="byteString">%d 字节</string>
+    <string name="intervalHint">发送间隔</string>
+    <string name="selectFile">选择文件</string>
+    <string name="selectedFile">已选择文件：%s</string>
+    <string name="testFile">测试文件</string>
+
+
+    <!-- SelectFileActivity -->
+    <string name="custom_size">自定义大小</string>
+    <string name="shortcut_options">快捷选项</string>
+    <string name="send_file">发送文件</string>
+
+    <!-- Heand -->
+    <string name="back">返回</string>
+
+
+    <!--关于-->
+    <string name="company">公司</string>
+    <string name="company_name">深圳市飞易通科技有限公司</string>
+    <string name="tel_number">+86-0755-27924639</string>
+    <string name="tel">电话</string>
+    <string name="web">网址</string>
+    <string name="web_url">www.feasycom.com</string>
+    <string name="mail">邮件</string>
+    <string name="mail_addr">support@feasycom.com</string>
+    <string name="wx">微信</string>
+
+    <string name="qr_success">保存成功，请到相册查看。</string>
+    <string name="qr_failed">保存失败。</string>
+
+
+    <string name="userAndPrivacyAgreement">用户协议与隐私政策</string>
+    <string name="userAndPrivacyAgreementDetail">使用APP表示同意《%1$s》与《%2$s》,请前往"关于"查看协议详情。</string>-->
+    <string name="userAndPrivacyAgreementPrefix">使用APP表示同意</string>
+    <string name="userAndPrivacyAgreementSuffix">,请前往"关于"查看协议详情。</string>
+    <string name="userAgreement">用户协议</string>
+    <string name="privacyAgreement">隐私协议</string>
+    <string name="detail">详情</string>
+    <string name="agree">同意</string>
+    <string name="refuse">拒绝</string>
+
+    <!--SettingFragment-->
+    <string name="parameterDefining">参数修改</string>
+    <string name="settingTitle">设置</string>
+    <string name="connectTest">生产测试</string>
+    <string name="OTAUpgrade">空中升级</string>
+    <string name="open_sdp">开启SDP服务</string>
+    <string name="close_sdp">关闭SDP服务</string>
+
+    <string name="OTABatchUpgrade">批量空中升级</string>
+    <string name="wifi_setting_text">WiFi参数设置</string>
+    <string name="quickConnection">快速连接</string>
+
+    <string name="refresh">刷新</string>
+    <string name="feedback">反馈</string>
+
+
+    <!--parameterModify-->
+    <string name="begin">开始</string>
+    <string name="deviceName">设备名</string>
+    <string name="pin">配对码</string>
+    <string name="baud">波特率</string>
+    <string name="customizeSelect">自定义已选中</string>
+    <string name="customizeCommand">自定义指令 ∧</string>
+    <string name="customizeCommandHid">自定义指令 ∨</string>
+    <string name="none">无</string>
+    <string name="compeletCount">完成数</string>
+    <string name="name">设备名</string>
+    <string name="addr">地址</string>
+    <string name="openEngineSuccess">进入空中指令模式成功</string>
+    <string name="openEngineTimeOut">进入空中指令模式超时</string>
+    <string name="openEngineFailed">进入空中指令模式失败</string>
+    <string name="read">读取</string>
+    <string name="version">版本</string>
+    <string name="success">成功</string>
+    <string name="failed">失败</string>
+    <string name="timeout">超时</string>
+    <string name="same">相同</string>
+    <string name="modify">修改</string>
+    <string name="modifyComplete">修改完成</string>
+    <string name="password">密码</string>
+    <string name="modifyCompleteCount">修改完成数</string>
+    <string name="commandNull">AT指令为空</string>
+
+
+    <!--ota-->
+    <string name="pleaseSelectTheFirmware">请选择固件</string>
+    <string name="downloadFile">获取固件</string>
+    <string name="dfuName">DFU Name</string>
+    <string name="openFile">选择固件</string>
+    <string name="selectedFirmware">已选固件</string>
+    <string name="notToChoose">无</string>
+    <string name="type">型号</string>
+    <string name="versionApp">APP版本</string>
+    <string name="bootLoader">BL版本</string>
+    <string name="module">模块</string>
+    <string name="firmware">固件</string>
+    <string name="toUpgrade">开始升级</string>
+    <string name="restoreTheFactorySettings">升级并恢复出厂设置</string>
+    <string name="checkModuleVersion">校验模块版本</string>
+    <string name="dfuIllegal">dfu文件非法</string>
+    <string name="waitingForUpdate">等待升级</string>
+    <string name="updating">升级中</string>
+    <string name="please_start_the_upgrade">请开始升级</string>
+    <string name="updateSuccess">升级成功</string>
+    <string name="updateFailed">升级失败</string>
+    <string name="nameNotMatch">设备型号不匹配</string>
+    <string name="versionIsLow">固件版本低</string>
+    <string name="blIsHigh">设备引导版本高</string>
+    <string name="pairing_record">清除配对记录</string>
+    <string name="network_error">网络错误，请检查网络！</string>
+    <string name="down_file_error">网络或文件名错误</string>
+    <string name="down_file_finish">下载成功</string>
+    <string name="io_error">文件读取错误</string>
+    <string name="error">错误</string>
+    <string name="dfu_error">无效固件</string>
+
+
+    <string name="permission_rationale_settings">您可以通过导航到应用程序设置来授予此权限。</string>
+    <string name="title_permission_required">需要权限</string>
+    <string name="external_storage_permission_required">下载固件并导入到外部存储目录中需要访问外部存储的权限。</string>
+    <string name="upgrade_percentage">%1$d</string>
+
+
+    <string name="feedback_title">问题反馈</string>
+    <string name="feedback_proposal">建议</string>
+    <string name="feedback_abnormal_function">功能异常</string>
+    <string name="feedback_interface_abnormality">界面异常</string>
+    <string name="feedback_cooperation">合作</string>
+    <string name="feedback_submit">提交</string>
+    <string name="feedback_data_error">请输入反馈问题。</string>
+    <string name="feedback_status">正在发送反馈内容&#8230;</string>
+    <string name="feedback_success">反馈成功</string>
+    <string name="feedback_failure">反馈失败</string>
+    <string name="no_network">未接入互联网</string>
+    <string name="CRC">CRC32: %s</string>
+    <string name="export">导出</string>
+    <string name="percentage">100 %%</string>
+    <string name="sendByte">已发送：%1$d</string>
+    <string name="rate">平均速率：%1$d Bytes/s</string>
+    <string name="timer">时间：</string>
+    <string name="hide">点击隐藏</string>
+    <string name="photo_album">相册</string>
+
+
+    <string name="number_upgrades">升级数： %1$d</string>
+    <string name="stop_batch_upgrade">停止批量升级</string>
+    <string name="start_batch_upgrade">开始批量升级</string>
+    <string name="batch_warning">已升级指定数量的设备，请点击右上角设置进行修改升级设备数量</string>
+    <string name="show_progress">显示进度条</string>
+
+    <string name="send_progress">%1$d %%</string>
+
+
+
+    <string name="digitsHex">0123456789abcdefABCDEF </string>
+</resources>

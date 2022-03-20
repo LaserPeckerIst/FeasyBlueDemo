@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.feasycom.feasyblue">
+
+
+    <!-- 定位权限   -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- 联网权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 写入外部存储空间 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <!-- 访问互联网权限  -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.intent.action.OPEN_DOCUMENT" />
+
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+        <!--android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="s"/>-->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+
+
+
+    <application
+        android:name=".App"
+        android:icon="@mipmap/ic_launcher"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="false"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/Theme.Feasycom">
+
+        <activity android:name=".activity.SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- 桌面长按菜单 -->
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity>
+
+        <activity android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+
+        <activity android:name=".activity.ThroughputActivity"
+            android:launchMode="singleTask"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <activity android:name=".activity.SelectFileActivity"
+            android:launchMode="singleTask"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity android:name=".activity.ServiceSelectActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+
+        <activity android:name=".activity.FilterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+
+        <activity android:name=".activity.PasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+
+        <activity android:name=".activity.ParameterModificationActivity"
+            android:launchMode="singleTask"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <activity android:name=".activity.ParameterModificationDeviceListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+
+        <activity android:name=".activity.ParameterModifyInformationActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"/>
+
+        <activity android:name=".activity.OtaSearchDeviceActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:exported="true"
+            tools:ignore="AppLinkUrlError">
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data  android:mimeType="application/octet-stream" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.OtaActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+
+        <activity android:name=".activity.CharacteristicDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+
+        <activity android:name=".activity.FeedbackActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+
+        <activity android:name=".activity.QRCodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+
+        <activity android:name=".activity.AgreementActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+
+        <activity android:name=".activity.BatchOtaActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+
+        <activity android:name=".activity.BatchOtaConfigActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <service android:name="com.feasycom.ble.service.OTAService"
+            android:enabled="true"/>
+
+        <service android:name="com.feasycom.spp.service.OTAService"
+            android:enabled="true"/>
+    </application>
+</manifest>

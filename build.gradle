@@ -1,0 +1,220 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.feasycom.feasyblue"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 29
+        versionName "3.4.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            // debbuggable true
+            minifyEnabled false
+            zipAlignEnabled = false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/ota_release.kotlin_module'
+        exclude 'META-INF/common_release.kotlin_module'
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+
+    /*signingConfigs {
+        debug {
+            storeFile file("D:\\code\\Android\\key\\FeasyBeacon_SPP.jks")
+            storePassword "Feasycom2013"
+            keyAlias "key1"
+            keyPassword "Feasycom2013"
+        }
+        release {
+            storeFile file("D:\\code\\Android\\key\\FeasyBeacon_SPP.jks")
+            storePassword "Feasycom2013"
+            keyAlias "key1"
+            keyPassword "Feasycom2013"
+        }
+    }*/
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    /*packagingOptions {
+        exclude 'META-INF/com/android/build/gradle/aar-metadata.properties'
+    }*/
+
+    // 解决The minCompileSdk (30) specified in a
+    //     dependency's AAR metadata (META-INF/com/android/build/gradle/aar-metadata.properties)
+    /*configurations.all {
+        resolutionStrategy { force 'androidx.core:core-ktx:1.6.0' }
+    }*/
+}
+
+dependencies {
+
+    def coroutines_version = "1.4.2"
+    def room_version = "2.2.6"
+    def retrofit_version = "2.9.0"
+    def work_version = "2.5.0"
+    def glide_version = "4.11.0"
+    def lifecycle_version = "2.3.1"
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation fileTree(dir: "libs", include: ["*.aar"])
+
+
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    implementation 'com.permissionx.guolindev:permissionx:1.4.0'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+
+    // 仿ios 开关
+    implementation 'com.github.iielse:switchbutton:1.0.4'
+    // 滑块
+    implementation 'com.github.Jay-Goo:RangeSeekBar:v3.0.0'
+
+    //图片加载库
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+
+    implementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    implementation "androidx.work:work-runtime-ktx:$work_version"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.work:work-runtime:$work_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+    implementation 'org.litepal.guolindev:core:3.2.3'
+
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
+
+    implementation 'com.googlecode.juniversalchardet:juniversalchardet:1.0.3'
+
+
+    // 日志调试框架：https://github.com/getActivity/Logcat
+    // debugImplementation 'com.github.getActivity:Logcat:9.9'
+
+    // implementation project(path: ':network')
+
+// if u use AndroidX, use the following
+    implementation 'com.blankj:utilcodex:1.30.6'
+
+    /*implementation project(path: ':network')
+    implementation project(path: ':ble')
+    implementation project(path: ':spp')
+    implementation project(path: ':common')
+    implementation project(path: ':encrypt')
+    implementation project(path: ':ota')*/
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation "androidx.core:core-ktx:1.3.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+
+
+    // GSON 数据解析
+    implementation "com.google.code.gson:gson:2.7"
+
+    implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
+
+
+    implementation 'com.swallowsonny:convert-ext:1.0.4'
+
+
+    implementation 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.2.0
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+
+
+
+
+}
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    ext.kotlin_version = '1.5.0'
+    ext.ndkVersion = "21.4.7075529"
+    repositories {
+        jcenter()
+        google()
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        def nav_version = "2.3.5"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        classpath 'com.android.tools.build:gradle:4.2.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.20"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+        maven { url 'https://jitpack.io' }
+    }
+}
+

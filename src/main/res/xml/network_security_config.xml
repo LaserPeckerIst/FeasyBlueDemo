@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- 解决腾讯bugly在android 6.0无法连接网络上传崩溃信息的bug -->
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

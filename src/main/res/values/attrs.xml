@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="forceAtCommandView">
+        <attr name="label" format="string"/>
+        <attr name="context" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="FilePickerPreference"><attr format="enum" name="selection_mode">
+        <enum name="single_mode" value="0"/>
+        <enum name="multi_mode" value="1"/>
+    </attr><attr format="enum" name="selection_type">
+        <enum name="file_select" value="0"/>
+        <enum name="dir_select" value="1"/>
+        <enum name="file_dir_select" value="2"/>
+    </attr>
+        <attr format="string" name="root_dir"/>
+        <attr format="string" name="error_dir"/>
+        <attr format="string" name="offset_dir"/>
+        <attr format="string" name="extensions"/>
+        <attr format="string" name="title_text"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="MyWebView">
+        <attr name="url" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomizeAtCommandView">
+        <attr name="atCommandCount" format="integer"/>
+        <attr name="atCommandNoParam" format="integer"/>
+
+    </declare-styleable>
+
+</resources>

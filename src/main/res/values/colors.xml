@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+
+    //状态栏
+    <color name="color_nb">#383a3d</color>
+    //底栏
+    <color name="color_tb">#fafafa</color>
+    <color name="color_tb_text">#a3a3a3</color>
+
+    <color name="text_color_green">#1dffc3</color>
+    <color name="text_color_blue">#005fff</color>
+    <color name="text_color_grey">#999999</color>
+    <color name="text_color_purple">#9306f1</color>
+    <color name="text_color_yellow">#fff000</color>
+
+    <color name="select_file_button">#138BE6</color>
+
+    <color name="btn_color_selected">#ff00ff00</color>
+    <color name="btn_color_disselect">#00dfff</color>
+
+    <color name="grey">#b6b6b7</color>
+    <color name="light_grey">#eeeeee</color>
+    <color name="yellow">#ffff00</color>
+    <color name="red">#ff0000</color>
+    <color name="green">#51fda2</color>
+    <color name="dar_green">#21cc21</color>
+    <color name="blue">#00ffc4</color>
+    <color name="lightBlue">#00dfff</color>
+    <color name="midBlue">#009fff</color>
+
+    <color name="color_pressed">#9c000000</color>
+    <color name="ripple_color">#ffeeeeee</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_count">#ffffffff</color>
+    <color name="color_voltage">#ff00ff00</color>
+    <color name="color_down">#ff000000</color>
+
+
+
+
+    <color name="title_background">#f3f3f3</color>
+    <color name="title_left_right">#0e74bd</color>
+
+
+    <color name="about_text">#1074bc</color>
+
+    <color name="setting_rssi">#808080</color>
+    <color name="setting_mac">#323232</color>
+    <color name="setting_name">#333333</color>
+
+
+    <color name="beacon_info">#333333</color>
+    <color name="beacon_rssi">#595959</color>
+
+
+    <color name="about_title">#1d1d1d</color>
+
+    <color name="text_enable">#7b7b7b</color>
+    <color name="text_disable">#1d1d1d</color>
+
+    <color name="divide_line">#e5e5e5</color>
+
+
+    <color name="footer_on_text_color">#1762f5</color>
+
+
+    <color name="colorHeader">#383a3d</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="textColorSecondary">#FFFFFF</color>
+
+    <!--文件选择器-->
+
+    <color name="color_FFFFFF">#FFFFFF</color>
+    <color name="color_CCCCCC">#CCCCCC</color>
+    <color name="color_transparent">@android:color/transparent</color>
+    <color name="color_EEEEEE">#EEEEEE</color>
+
+    <!--item内部第二行文本分割线颜色-->
+    <color name="dfileselector_file_item_split_line_color">@color/color_CCCCCC</color>
+
+    <!--item bg 颜色-->
+    <color name="dfileselector_file_item_bg_default">@color/color_FFFFFF</color>
+    <color name="dfileselector_file_item_bg_press">@color/color_CCCCCC</color>
+
+    <!--上一层级按钮背景-->
+    <color name="dfileselector_file_upper_level_bg_default">@color/color_transparent</color>
+    <color name="dfileselector_file_upper_level_item_bg_press">@color/color_CCCCCC</color>
+
+    <!--提交按钮背景-->
+    <color name="dfileselector_file_submit_button_bg_default">@color/color_EEEEEE</color>
+    <color name="dfileselector_file_submit_button_bg_press">@color/color_CCCCCC</color>
+    <!--end文件选择器-->
+
+
+    <color name="button_background">#898989</color>
+</resources>

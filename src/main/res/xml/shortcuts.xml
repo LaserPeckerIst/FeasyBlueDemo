@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcut xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:enabled="true"
+        android:shortcutDisabledMessage="@string/OTAUpgrade"
+        android:shortcutId="ota"
+        android:icon="@mipmap/ota"
+        android:shortcutLongLabel="@string/OTAUpgrade"
+        android:shortcutShortLabel="@string/OTAUpgrade">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.feasycom.feasyblue.activity.OtaSearchDeviceActivity"
+            android:targetPackage="com.feasycom.feasyblue" />
+        <categories android:name="android.shortcut.conversation"/>
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:shortcutDisabledMessage="@string/parameterDefining"
+        android:shortcutId="parameterModification"
+        android:icon="@mipmap/modify"
+        android:shortcutLongLabel="@string/parameterDefining"
+        android:shortcutShortLabel="@string/parameterDefining">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.feasycom.feasyblue.activity.PasswordActivity"
+            android:targetPackage="com.feasycom.feasyblue" />
+        <categories android:name="android.shortcut.conversation"/>
+    </shortcut>
+
+</shortcut>

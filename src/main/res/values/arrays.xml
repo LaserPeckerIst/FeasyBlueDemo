@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="wordsArray">
+        <item>KB</item>
+        <item>MB</item>
+        <item>10^3</item>
+        <item>10^6</item>
+    </string-array>
+
+
+    <string-array name="select_url_zh">
+        <item>QQ文件目录</item>
+        <item>微信文件目录</item>
+        <item>FeasyBlue下载目录</item>
+        <item>根目录</item>
+    </string-array>
+
+
+    <string-array name="select_url_en">
+        <item>FeasyBlue Download directory</item>
+        <item>Root directory</item>
+    </string-array>
+
+
+    <string-array name="file_size">
+        <item>10 KB</item>
+        <item>1 MB</item>
+        <item>50 KB</item>
+        <item>2 MB</item>
+        <item>100 KB</item>
+        <item>5 MB</item>
+        <item>200 KB</item>
+        <item>10 MB</item>
+        <item>500 KB</item>
+        <item>20 MB</item>
+    </string-array>
+</resources>

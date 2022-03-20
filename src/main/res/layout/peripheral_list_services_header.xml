@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/advDataLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:layout_marginTop="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="@string/advData"
+        android:textColor="#64646a"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/advData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:textIsSelectable="true"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_buttom_line"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/advFlagLL"
+            style="@style/serviceSelectLL">
+
+            <TextView
+                android:id="@+id/advFlag"
+                style="@style/serviceSelectTop"
+                android:text="unknow" />
+
+            <TextView
+                style="@style/serviceSelectButtom"
+                android:text="Flags" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/incompleteServiceUUIDs_16bit_LL"
+            style="@style/serviceSelectLL">
+
+            <TextView
+                android:id="@+id/incompleteServiceUUIDs_16bit"
+                style="@style/serviceSelectTop"
+                android:text="unknow" />
+
+            <TextView
+                style="@style/serviceSelectButtom"
+                android:text="Incomplete 16-bit Service UUIDs" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/incompleteServiceUUIDs_128bit_LL"
+            style="@style/serviceSelectLL">
+
+            <TextView
+                android:id="@+id/incompleteServiceUUIDs_128bit"
+                style="@style/serviceSelectTop"
+                android:text="unknow" />
+
+            <TextView
+                style="@style/serviceSelectButtom"
+                android:text="Incomplete 128-bit Service UUIDs" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/completeLocalNameLL"
+            style="@style/serviceSelectLL">
+
+            <TextView
+                android:id="@+id/completeLocalName"
+                style="@style/serviceSelectTop"
+                android:text="unknow" />
+
+            <TextView
+                style="@style/serviceSelectButtom"
+                android:text="Complete Local Name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/serviceDataLL"
+            style="@style/serviceSelectLL">
+
+            <TextView
+                android:id="@+id/serviceData"
+                style="@style/serviceSelectTop"
+                android:text="unknow" />
+
+            <TextView
+                style="@style/serviceSelectButtom"
+                android:text="Service Data" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/txPowerLevelLL"
+            style="@style/serviceSelectLL">
+
+            <TextView
+                android:id="@+id/txPowerLevel"
+                style="@style/serviceSelectTop"
+                android:text="unknow" />
+
+            <TextView
+                style="@style/serviceSelectButtom"
+                android:text="Tx Power Level" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/manufacturerSpecificDataLL"
+            style="@style/serviceSelectLL">
+
+            <TextView
+                android:id="@+id/manufacturerSpecificData"
+                style="@style/serviceSelectTop"
+                android:text="unknow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="13sp"
+                android:textColor="#141414"
+                android:paddingBottom="8dp"
+                android:text="Manufacturer Specific Data" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

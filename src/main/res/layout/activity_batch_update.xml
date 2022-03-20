@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/toolbarSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/filter_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:text="@string/filter"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <TextView
+        android:id="@+id/otaState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/openFile"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Chronometer
+        android:id="@+id/timeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/otaState"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintBottom_toBottomOf="@+id/otaState"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/otaState" />
+
+    <ProgressBar
+        android:id="@+id/otaProgress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/progressCount"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/otaState" />
+
+
+    <TextView
+        android:id="@+id/progressCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/otaProgress"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/otaProgress"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/otaProgress"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        app:layout_constraintBottom_toBottomOf="@+id/otaProgress"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/otaProgress" />
+
+
+    <ImageButton
+        android:id="@+id/selectFileButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/progressCount"
+        android:background="@drawable/file"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/otaProgress" />
+
+
+    <TextView
+        android:id="@+id/open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/selectFileButton"
+        android:layout_marginStart="8dp"
+        android:layout_toRightOf="@id/selectFileButton"
+        android:text="@string/openFile"
+        app:layout_constraintBottom_toBottomOf="@+id/selectFileButton"
+        app:layout_constraintStart_toEndOf="@+id/selectFileButton"
+        app:layout_constraintTop_toTopOf="@+id/selectFileButton" />
+
+    <ImageButton
+        android:id="@+id/downloadButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/progressCount"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/open"
+        android:background="@drawable/download"
+        app:layout_constraintBottom_toBottomOf="@+id/open"
+        app:layout_constraintStart_toEndOf="@+id/open"
+        app:layout_constraintTop_toTopOf="@+id/open" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/downloadButton"
+        android:layout_marginStart="8dp"
+        android:text="@string/downloadFile"
+        app:layout_constraintBottom_toBottomOf="@+id/downloadButton"
+        app:layout_constraintStart_toEndOf="@+id/downloadButton"
+        app:layout_constraintTop_toTopOf="@+id/downloadButton" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectFileButton"
+        android:layout_marginTop="10dp"
+        android:text="@string/selectedFirmware"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/selectFileButton" />
+
+    <TextView
+        android:id="@+id/fileName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/notToChoose"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+
+    <CheckBox
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/resetFlag"
+        android:layout_marginTop="20dp"
+        android:text="@string/pairing_record"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/fileName" />
+
+    <CheckBox
+        android:id="@+id/resetFlag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/startOtaButton"
+        android:text="@string/restoreTheFactorySettings"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/clear" />
+
+
+    <CheckBox
+        android:id="@+id/checkModuleVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/startOtaButton"
+        android:text="@string/checkModuleVersion"
+        android:visibility="gone"
+        android:checked="true"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/resetFlag" />
+
+    <Button
+        android:id="@+id/startOtaButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_setting_btn"
+        android:enabled="false"
+        android:padding="2dp"
+        android:text="@string/start_batch_upgrade"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/checkModuleVersion" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/copy_btn"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/startOtaButton">
+        <TextView
+            android:id="@+id/upgrade_log_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:focusable="false"
+            android:gravity="top"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:autofillHints="升级信息" />
+
+    </ScrollView>
+
+
+
+    <Button
+        android:id="@+id/clear_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清除"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/copy_btn" />
+
+    <Button
+        android:id="@+id/copy_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="全部复制"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/export_btn" />
+
+
+    <Button
+        android:id="@+id/export_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="删除历史记录"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7" />
+
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="progressCount,otaProgress,timeCount,textView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

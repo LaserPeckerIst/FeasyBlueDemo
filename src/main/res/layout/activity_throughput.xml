@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/toolbarSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <Button
+        android:id="@+id/switchServiceButton"
+        style="@style/throughput_btn"
+        android:layout_marginEnd="10dp"
+        android:text="@string/transmissionConfiguration"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/export"
+        app:layout_constraintEnd_toStartOf="@+id/export"
+        app:layout_constraintTop_toTopOf="@+id/export" />
+
+    <Button
+        android:id="@+id/export"
+        style="@style/throughput_btn"
+        android:layout_marginEnd="10dp"
+        android:text="@string/export"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/clearButton"
+        app:layout_constraintEnd_toStartOf="@+id/clearButton"
+        app:layout_constraintTop_toTopOf="@+id/clearButton" />
+
+    <Button
+        android:id="@+id/clearButton"
+        style="@style/throughput_btn"
+        android:layout_marginTop="8dp"
+        android:text="@string/clear"
+        android:textColor="#212121"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/receiveTextView"
+        style="@style/throughputText"
+        android:layout_marginTop="10dp"
+        android:text="@string/receive"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toBottomOf="@+id/clearButton" />
+
+    <TextView
+        android:id="@+id/crcReceive"
+        style="@style/throughputText"
+        android:text="@string/CRC"
+        app:layout_constraintBottom_toBottomOf="@+id/receiveTextView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toTopOf="@+id/receiveTextView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.64" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.81" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <EditText
+        android:id="@+id/receiveEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:focusable="false"
+        android:gravity="top"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toBottomOf="@+id/receiveTextView" />
+
+
+    <TextView
+        android:id="@+id/sendTextView"
+        style="@style/throughputText"
+        android:layout_marginTop="10dp"
+        android:text="@string/send"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+
+    <TextView
+        android:id="@+id/crcSend"
+        style="@style/throughputText"
+        android:text="@string/CRC"
+        app:layout_constraintBottom_toBottomOf="@+id/sendTextView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toTopOf="@+id/sendTextView" />
+
+    <EditText
+        android:id="@+id/sendEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:gravity="top"
+
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/editByteCount"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toBottomOf="@+id/sendTextView" />
+
+    <TextView
+        android:id="@+id/editByteCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="end"
+        android:text="@string/byteString"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="@+id/guideline12" />
+
+
+    <EditText
+        android:id="@+id/intervalSendTime"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints="100"
+        android:background="@drawable/edit_background"
+        android:gravity="end|center"
+        android:hint="0"
+        android:inputType="number"
+        android:maxLength="5"
+        android:paddingEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline22"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/textView20"
+        style="@style/throughputText"
+        android:layout_marginStart="3dp"
+        android:text="ms"
+        app:layout_constraintBottom_toBottomOf="@+id/intervalSendTime"
+        app:layout_constraintStart_toEndOf="@+id/intervalSendTime"
+        app:layout_constraintTop_toTopOf="@+id/intervalSendTime" />
+
+
+    <TextView
+        android:id="@+id/textView22"
+        style="@style/throughputText"
+        android:layout_marginStart="10dp"
+        android:text="@string/intervalSend"
+        app:layout_constraintBottom_toBottomOf="@+id/intervalSendTime"
+        app:layout_constraintStart_toEndOf="@+id/textView20"
+        app:layout_constraintTop_toTopOf="@+id/intervalSendTime" />
+
+
+    <com.github.iielse.switchbutton.SwitchView
+        android:id="@+id/intervalSendCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/intervalSendTime"
+        app:layout_constraintStart_toEndOf="@+id/textView22"
+        app:layout_constraintTop_toTopOf="@+id/intervalSendTime"
+        tools:ignore="MissingClass,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView27"
+        style="@style/throughputText"
+        android:text="HEX"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toTopOf="@+id/guideline22" />
+
+
+    <com.github.iielse.switchbutton.SwitchView
+        android:id="@+id/hexCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView27"
+        app:layout_constraintStart_toEndOf="@+id/textView27"
+        app:layout_constraintTop_toTopOf="@+id/textView27"
+        tools:ignore="MissingClass,MissingConstraints" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_background"
+        android:text="@string/sendPackage"
+        android:textAllCaps="false"
+        android:textColor="#212121"
+        app:layout_constraintBottom_toTopOf="@+id/guideline22"
+        app:layout_constraintEnd_toEndOf="@+id/sendFileButton"
+        app:layout_constraintStart_toStartOf="@+id/sendFileButton"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <Button
+        android:id="@+id/sendFileButton"
+        style="@style/throughput_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/sendFile"
+        android:textAllCaps="false"
+        android:textColor="#212121"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toTopOf="@+id/guideline22" />
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:id="@+id/numberProgressBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/rateText"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintTop_toBottomOf="@+id/sendTextView"
+        custom:progress_current="0"
+        custom:progress_max="100"
+        custom:progress_reached_bar_height="40dp"
+        custom:progress_reached_color="#F9D07E"
+        custom:progress_text_color="#000000"
+        custom:progress_text_offset="1dp"
+        custom:progress_text_size="22sp"
+        custom:progress_unreached_bar_height="40dp"
+        custom:progress_unreached_color="#F0F0F0" />
+
+    <TextView
+        android:id="@+id/rateText"
+        style="@style/throughputText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rate"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline12" />
+
+
+    <TextView
+        android:id="@+id/textView28"
+        style="@style/throughputText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/timer"
+        app:layout_constraintBottom_toBottomOf="@+id/rateText"
+        app:layout_constraintEnd_toStartOf="@+id/chronometer"
+        app:layout_constraintTop_toTopOf="@+id/rateText" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        style="@style/throughputText"
+        android:format="00:00:00"
+        app:layout_constraintBottom_toBottomOf="@+id/textView28"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toTopOf="@+id/textView28" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="hexCheck,textView22,intervalSendCheck,sendButton,textView27, sendEdit, editByteCount" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="chronometer, rateText, numberProgressBar, textView28, stop_btn, send_status_btn, selected_file_tv" />
+
+    <ImageButton
+        android:id="@+id/send_status_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/stop_btn"
+        app:layout_constraintTop_toBottomOf="@+id/intervalSendTime" />
+
+    <ImageButton
+        android:id="@+id/stop_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView27"
+        app:layout_constraintTop_toBottomOf="@+id/intervalSendTime" />
+
+    <TextView
+        android:id="@+id/selected_file_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/intervalSendTime"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintStart_toEndOf="@+id/textView22"
+        app:layout_constraintTop_toTopOf="@+id/intervalSendTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
